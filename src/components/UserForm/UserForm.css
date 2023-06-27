@@ -1,0 +1,7 @@
+.form-wrapper {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
