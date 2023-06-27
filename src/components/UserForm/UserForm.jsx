@@ -13,7 +13,7 @@ export class UserForm extends Component {
     componentDidMount() {
         const contacts = localStorage.getItem('contacts');
         const newContacts = JSON.parse(contacts);
-        this.setState({contacts: newContacts});
+        newContacts !== null && this.setState({contacts: newContacts});
     }
 
     componentDidUpdate(prevProps, prevState) {
