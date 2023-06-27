@@ -7,13 +7,13 @@ import '../UserForm/UserForm.css';
 export class UserForm extends Component {
     state = {
         contacts: [],
-        filter: '',
+        filter: ' ',
     }
 
     componentDidMount() {
         const contacts = localStorage.getItem('contacts');
         const newContacts = JSON.parse(contacts);
-        this.setState({contacts: newContacts, filter: ''});
+        this.setState({contacts: newContacts, filter: ' '});
     }
 
     componentDidUpdate(prevProps, prevState) {
