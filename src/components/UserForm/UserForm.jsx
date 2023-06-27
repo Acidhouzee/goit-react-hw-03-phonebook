@@ -13,15 +13,12 @@ export class UserForm extends Component {
     componentDidMount() {
         const contacts = localStorage.getItem('contacts');
         const newContacts = JSON.parse(contacts);
-        const filter = localStorage.getItem('filter');
-        const newFilter = JSON.parse(filter)
-        this.setState({contacts: newContacts, filter: newFilter});
+        this.setState({contacts: newContacts});
     }
 
     componentDidUpdate(prevProps, prevState) {
         if(this.state.contacts !== prevState.contacts) {
             localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-            localStorage.setItem('filter', JSON.stringify(this.state.filter));
         }
     }
 
