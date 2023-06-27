@@ -6,10 +6,7 @@ import '../UserForm/UserForm.css';
 
 export class UserForm extends Component {
     state = {
-        contacts: [
-            { id: 1, name: 'John Doe', number: '123-456-7890' },
-            { id: 2, name: 'Jane Smith', number: '987-654-3210' },
-        ],
+        contacts: [],
         filter: '',
     }
 

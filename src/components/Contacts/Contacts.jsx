@@ -6,7 +6,7 @@ export const Contacts = ( { contacts, filter, deleteContact } ) => (
     <div className="feedback-options">
         <ul>
             {contacts
-            .filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()))
+            ?.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()))
             .map((contact, index) => (
                 <li key={index} id={contact.id}>
                     {contact.name}: {contact.number}
