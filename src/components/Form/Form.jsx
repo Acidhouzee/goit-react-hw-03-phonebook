@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { nanoid } from "nanoid";
-import '../Form/Form.css';
+import css from '../Form/Form.module.css';
 
 export class Form extends Component {
 
@@ -37,10 +37,11 @@ export class Form extends Component {
         const { number } = this.state;
 
         return(
-            <form className="user-form" onSubmit={this.handleSubmit}>
-                <label>
+            <form className={css.user_form} onSubmit={this.handleSubmit}>
+                <label className={css.user_form_label}>
                     Name:
                     <input
+                        className={css.user_form_input}
                         type="text"
                         name="name"
                         pattern="^[A-Za-z\u0080-\uFFFF ']+$"
@@ -50,9 +51,10 @@ export class Form extends Component {
                         onChange={this.handleChangeName}
                     />
                 </label>
-                <label>
+                <label className={css.user_form_label}>
                     Phone:
                     <input
+                        className={css.user_form_input}
                         type="tel"
                         name="number"
                         pattern="^(\+?[0-9.\(\)\-\s]*)$"
@@ -63,7 +65,7 @@ export class Form extends Component {
                     />
                 </label>
 
-                <button type="submit">Add Contact</button>
+                <button className={css.user_form_button} type="submit">Add Contact</button>
             </form>
         );
     }

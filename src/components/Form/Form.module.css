@@ -1,17 +1,17 @@
-.user-form {
+.user_form {
     display: flex;
     flex-direction: column;
 }
 
-.user-form input {
+.user_form_input {
     margin-left: 10px;
 }
 
-.user-form label + label {
-    margin-top: 15px;
+.user_form_label {
+    margin-bottom: 15px;
 }
 
-.user-form button {
+.user_form_button {
     margin-top: 20px;
     max-width: 100px;
 }

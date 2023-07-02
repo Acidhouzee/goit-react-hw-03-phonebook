@@ -1,12 +1,12 @@
-.feedback-options ul {
+.feedback_options_ul {
     padding-left: 0;
     list-style: none;
 }
 
-.feedback-options li {
+.feedback_options_li {
     margin-top: 10px;
 }
 
-.feedback-options li button {
+.feedback_options_li_button {
     margin-left: 10px;
 }

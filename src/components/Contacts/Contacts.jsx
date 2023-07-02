@@ -1,16 +1,16 @@
 import React from "react";
-import '../Contacts/Contacts.css';
+import css from '../Contacts/Contacts.module.css';
 
 
 export const Contacts = ( { contacts, filter, deleteContact } ) => (
     <div className="feedback-options">
-        <ul>
+        <ul className={css.feedback_options_ul} >
             {contacts
             ?.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()))
             .map((contact, index) => (
-                <li key={index} id={contact.id}>
+                <li className={css.feedback_options_li} key={index} id={contact.id}>
                     {contact.name}: {contact.number}
-                    <button type="button" onClick={() => deleteContact(contact.id)}>Delete</button>
+                    <button className={css.feedback_options_li_button} type="button" onClick={() => deleteContact(contact.id)}>Delete</button>
                 </li>
             ))}
         </ul>
